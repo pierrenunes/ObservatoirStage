@@ -1,0 +1,579 @@
+body,html{
+    width : 98%;
+    display: inline-block;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: raleway;
+}
+
+h1,h2,h3,h4,h5{
+    display: inline-block;
+    font-family: raleway;
+    font-weight: 400;
+    line-height: 1.1;
+    color: inherit;
+}
+
+/* Titre + image en haut de la page */
+#header{
+    display: inline-block;
+    width: 95%;
+}
+#logo{
+    float: right;
+    padding-right: 5px;
+}
+
+/* Les 4 select */
+select {
+    display: block;
+    width: 95%;
+    height: 34px;
+    padding: 6px 12px;
+    margin:5px 0 5px 0;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555555;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+/* division ou se trouve la barre de recherche et les radion button*/
+#divSearch{
+    border: 2px solid rgb(44,117,169);
+    border-radius: 4px;
+    width: 90%;
+    padding:10 0 0 20px;
+}
+/* Bloc barre recherche + image loupe*/
+#bloc_autocomp{
+    width: 95%;
+}
+/* barre de recherche et image loupe*/
+#completion_select,.searchAnnu{    
+    display: inline-block;
+    vertical-align: middle;
+}
+/* image loupe */
+#completion_select{
+    display: inline-block;
+    height: 33px;
+    width: 33px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    border: 1px solid rgb(44,117,169);
+    border-radius: 4px;
+    background-image: url("images/loupe.png");
+    color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* barre de recherche */
+.searchAnnu{
+    display: inline-block;
+    width: 89%;
+    height: 34px;
+    padding: 6px 12px;
+    margin:5px 0 5px 0;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555555;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+/* quand la barre de recherche est selectionnée*/
+select:focus, #search:focus{
+    border-color: #66afe9;
+    outline:0;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),
+    0 0 8px rgba(102,175,233,0.6);
+}
+
+#radioColl,#radioPers{
+    width: auto;
+    display: inline-block;
+
+}
+/* lien en dessous des select*/
+#accesRapideAnnu{
+    width: 95%;
+}
+#accesRapideAnnu a{
+    text-decoration: none;
+    color: rgb(44,117,169);
+    display: inline-block;
+    padding: 5px;
+    border: 1pt solid rgba(24,100,153,0.3);
+    border-radius: 20px;
+    margin: 5px 0 5px 0;
+    text-align: center;
+    width: 30%;
+}
+#accesRapideAnnu a:hover{
+    color: rgba(44,152,222,0.8);
+}
+
+/* RESULTAT RECHERCHE */
+
+table{
+    border-collapse: collapse;
+    border: 2pt solid rgb(44,117,169);
+    width: 95%;
+    margin: 0;
+}
+
+.imgPers{
+    vertical-align: middle;
+    margin: 5px;
+}
+#tableResultats td{
+    padding:2px 5px;
+}
+.epci_result{
+    height:50px;
+}
+#tableResultats a{
+    text-decoration: none;
+    color: rgb(44,117,169);
+    font-size: 1em;
+    padding-left: 10px;
+}
+#tableResultats a:hover{
+    color:rgba(44,152,222,0.8);
+}
+.titreresult{
+    border: 2pt outset rgb(44,117,169);
+}
+
+/* Barre de navigation */
+ul.sidenav {
+    list-style-type: none;
+    padding: 0;
+    background-color:  #333333;
+    position: relative;
+    height: auto;
+    overflow: auto;
+    width: 95%;
+    margin: 0;
+}
+
+ul.sidenav li a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    float: left;
+    text-align: unset;
+}
+
+ul.sidenav li a.active {
+    background-color: rgb(44,117,169);
+    color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+    background-color: rgba(24,100,153,0.3);
+    color: white;
+}
+
+div.content {
+    margin-left: 0;
+    padding: 1px 16px;
+    height: 1000px;
+}
+    #lien_erreur{
+    padding: 10px 10% 10px 0;
+    text-align: end;
+    float: right;
+}
+
+/* Onglet Généralité */
+
+.epci_onglet a{
+    text-decoration: none;
+    color: rgb(65,150,212);
+    /* font-size: 15pt; */
+    padding-left: 10px;
+}
+.epci_onglet a:hover {
+    color: rgba(24,100,153,0.3);
+}
+.titreDetail{
+    text-align: left;
+    padding-left: 0;
+}
+.fiche_sstitre, .fiche_titre,.fiche_titre_onglet4{
+    height: 30px;
+    background-color: #E6E6E0;
+    border-bottom: 1pt solid black;
+    padding : 5px 5px;
+}
+.fiche{
+    width: 95%;
+    margin-bottom: 5px;
+}
+.ligne_result_photo,.onglet1_photo{
+    padding: 5px;
+}
+.ligne_result{
+    padding-bottom: 10px;
+}
+
+/* Onglet 1 */
+
+.administration tr, .maire tr{
+    height: 50px;
+}
+.administration .fiche_texte:not(.onglet1_photo){
+    width: 30%;
+}
+.coordonnees td{
+    padding:5px;
+}
+#div_hor_stat{
+    display: flex;
+}
+#div_hor_stat .fiche_texte{
+    padding: 5px;
+}
+#fiche_horaires, #fiche_stats{
+    width: 48.8%;
+    margin: 0 0 5px 0;
+}
+#fiche_carte{
+    width: 95%;
+    border: 2px solid rgb(44,117,169);
+}
+#fiche_carte img{
+    padding: 5px;
+}
+div#fiche_carte:empty {
+    display: none;
+}
+
+/* Onglet 2 */
+
+#tableelus tr{
+    height:50px;
+    border: 1px solid rgb(65,150,212);
+}
+
+/* Onglet 3 */
+.tableintercomm tr{
+    height: 70px;
+    border: 1px solid rgb(65,150,212);
+}
+.tableintercomm .ligne_result_titre{
+    font-family: raleway;
+    font-size: 1.5em;
+    text-align: center;
+    color: rgb(44,117,169);
+    font-weight: bold;
+}
+.ligne_result_gauche{
+    padding-bottom: 10px;
+    width:60%; 
+    border-top:solid 1px rgb(65,150,212);
+}
+.ligne_result_droite{
+    padding-bottom: 10px;
+    width:40%; 
+    border-top:solid 1px rgb(65,150,212);
+}
+.onglet3 .fiche_sstitre{
+    text-align: center;
+}
+
+/* Onglet 4 */
+.fiche_titre_onglet4{
+    padding: 7px 0;
+} 
+.fiche_titre_onglet4 img {
+    margin: 0 10px;
+    width: 20px;
+    vertical-align: middle;
+}
+.imgPDFautreDecoupe{
+    height: 50px;
+}
+.onglet4{
+    width: 100% !important;
+}
+/* Onglet 5 */
+.onglet5 a{
+    font-size: 11pt;
+}
+/* Onglet 6 */
+/* Pop Up*/
+#Affichepopup{
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    left: 0;
+    width:100%;
+}
+#Affichepopup .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+#Affichepopup > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #E6E6E0;
+    display: inline-block;
+    height: auto;
+    max-width: 300px;
+    min-height: 300px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+    margin-bottom: 20px;
+
+}
+
+/* boutton pour fermer popup */
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid rgb(44,117,169);
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px !important;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #E6E6E0;
+}
+.onglet6 a:not(.lien){
+    padding-top: 10px;
+    display: block;
+}
+
+.encartInfo {
+    font-family: Raleway;
+    position: relative;
+    padding: 15px 15px 15px 80px;
+    border: 1px solid rgba(104,0,104,0.2);
+    background: url(images/bloc-info.png) no-repeat 20px 20px, url(./images/bg-info.png) repeat-y 16px 10px;
+    color: rgb(104,0,104);
+    font-size: 14px;
+    line-height: 180%;
+    z-index: 0;
+    clear: both;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width:600px){
+    #Affichepopup > div {display: none;}
+
+    body,html{
+        width:98%;
+    }
+    #header{
+        text-align: left;
+    }
+
+    #radioColl,#radioPers{
+        width: auto;
+        display: block;
+    
+    }
+
+    /* barre navigation */
+    ul.sidenav li a {
+        text-align: center;
+        float: none;
+    }
+    ul.sidenav {
+        width: 95%;
+        margin:0;
+    }
+
+    /* lien acces rapide */
+    #accesRapideAnnu a{
+        width: 100%;
+    }
+    
+    /* Onglet 2 3 */
+    .ligne_result_photo{
+        display: none;
+    }
+    .ligne_result_droite_2,.fiche_sstitre{
+        display: none;
+    }
+
+    /* onglet base */
+    .epci_onglet a{
+        text-decoration: none;
+        color: rgb(65,150,212);
+        font-size: 1em;
+        padding-left: 5px;
+    }
+    .epci_onglet a:hover {
+        color: rgba(24,100,153,0.3);
+    }
+
+    /* Onglet 1 */
+    #fiche_horaires, #fiche_stats{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    #fiche_carte{
+        width: 95%;
+        margin-bottom: 5px;
+        margin-left: 0;
+    }
+    #div_hor_stat {
+        display: block;
+    }
+
+    /* Onglet 2 */
+    #tableelus{
+        border-collapse: unset;
+    }
+
+    /* Onglet 3 */
+    .onglet3 a{
+        font-size: 15pt;
+    }
+    .tableintercomm{
+        border-collapse: unset;
+    }
+    .tableintercomm .ligne_result_titre{
+        padding: 30px 0;
+    }
+
+    /* Onglet 4 */
+    .fiche_titre_onglet4{
+        padding: 15px 0;
+    }
+    /* Onglet 6 */
+    #lienOnglet6{
+        display: none;
+    }
+
+}
+@media screen and (min-width:950px){
+
+    /* Base */
+    body,html{
+        width:100%;
+        height: auto;
+        margin:0 auto;
+    }
+    table{
+        margin: 0 auto;
+        width:100%;
+    }
+    select{
+        width:45%;
+        display: inline-block;
+    }
+    #header{
+        display: inline-block;
+        width: 95%;
+    }
+    #headerTitre{
+        /*padding-left:10%;*/
+    }
+    #logo{
+        padding-right: 5%;
+    }
+
+    /* Titre Nom com */
+    .titreDetail{
+        padding-left: 10%;
+    }
+
+    /*Barre de navigation */
+    ul.sidenav {
+        width: 100%;
+        margin:0 auto;
+    }
+    
+    /* recherche par select + barre de recherche */
+    #annuaire_epci_rech{
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    /* Barre de recherche */
+    .searchAnnu{
+        width: 89%;
+        
+    }
+    #divSearch{
+        width: 90%;
+        text-align: left;
+        margin: 0 auto;
+    }
+
+    /* Lien acces rapide */
+    #accesRapideAnnu{
+        width: 80%;
+        margin: 0 auto;
+    }
+    #accesRapideAnnu a{
+        width: 30%;
+    }
+
+    /* tableau resultats recherche */
+    #tableResultats td{
+        padding: 2px 50px;
+    }
+    #tableResultats a{
+        font-size: 13pt;
+    }
+
+    /* Onglet 1 */
+    .fiche{
+        width: 100%;
+        margin: 0 auto 10px auto;
+    }
+    #div_hor_stat{
+        width: 100%;
+        margin: 0 auto;
+    }
+    #fiche_horaires, #fiche_stats{
+        width: 50%;
+    }
+    #fiche_horaires{
+        margin-right: 5px;
+    }
+    #fiche_carte{
+        width: 99%;
+        margin: 0 auto;
+    }
+    .stats, .horaires{
+        width: 100%;
+    }
+    
+    
+}
